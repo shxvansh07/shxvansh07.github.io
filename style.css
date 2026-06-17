@@ -1,0 +1,301 @@
+:root {
+  --bg: #0b0d12;
+  --bg-soft: #11141b;
+  --card: #161a23;
+  --border: #232936;
+  --text: #e7e9ee;
+  --text-dim: #9aa3b2;
+  --accent: #6ee7b7;
+  --accent-2: #60a5fa;
+  --max-width: 880px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-soft);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.brand:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+nav.site-nav a {
+  margin-left: 20px;
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+main {
+  padding: 56px 0 80px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 6px;
+}
+
+.hero .role {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.hero p.lead {
+  color: var(--text-dim);
+  max-width: 640px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #06251b;
+  border-color: var(--accent);
+}
+
+.btn.primary:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.btn.ghost {
+  color: var(--text);
+}
+
+.btn.ghost:hover {
+  text-decoration: none;
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+section {
+  margin-top: 64px;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.skill-card h3 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: var(--accent-2);
+}
+
+.skill-card p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.card .meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 0 0 8px;
+  color: var(--text-dim);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag {
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: rgba(110, 231, 183, 0.08);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.edu-item, .leadership-item {
+  margin-bottom: 16px;
+}
+
+.edu-item h3, .leadership-item h3 {
+  margin: 0 0 2px;
+  font-size: 1rem;
+}
+
+.edu-item .meta, .leadership-item .meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+ul.achievements {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-dim);
+}
+
+ul.achievements li {
+  margin-bottom: 6px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer a {
+  color: var(--text-dim);
+  margin-right: 16px;
+}
+
+footer a:hover {
+  color: var(--accent-2);
+}
+
+.post-list .post-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-list .post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item .post-date {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+.post-item h3 {
+  margin: 8px 0 6px;
+}
+
+.post-item p {
+  color: var(--text-dim);
+  margin: 0;
+}
+
+article.post {
+  max-width: 680px;
+}
+
+article.post .post-date {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+article.post h1 {
+  margin-top: 0;
+}
+
+article.post p {
+  color: var(--text-dim);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
