@@ -51,16 +51,20 @@
       <h2>Experience</h2>
       <div class="card">
         <h3>Generative AI Intern — Softpro School of AI</h3>
-        <p class="meta">SSAI-101 · 45-Day AI Development Summer Training · Remote · Jun 2026 – Jul 2026</p>
+        <p class="meta">SSAI-101 · 46-Day AI Development Summer Training · Onsite, Lucknow, Uttar Pradesh · Jun 2026 – Jul 2026</p>
         <p>
           Built and deployed multi-provider LLM applications on the Groq API (with Gemini/Ollama
           fallbacks), applying zero-shot, few-shot, and chain-of-thought prompting with
           Pydantic-validated structured outputs. Implemented a semantic search and RAG pipeline from
-          scratch using sentence-transformer embeddings and a Chroma vector database, shipped as
-          Streamlit apps including a PDF/URL summarizer and a memory-persistent chatbot.
+          scratch using sentence-transformer embeddings and a Chroma vector database. Progressing into
+          agentic AI with LangChain and LangGraph to orchestrate multi-step, tool-using LLM workflows.
+          Shipped two Streamlit mini-projects (an AI content summarizer and a citation-aware RAG
+          assistant) and is now building an agentic Research Assistant with LangGraph.
         </p>
         <div class="tag-row">
           <span class="tag">Python</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span>
           <span class="tag">Groq / Gemini / Ollama</span>
           <span class="tag">Sentence-Transformers</span>
           <span class="tag">ChromaDB</span>
@@ -72,6 +76,77 @@
 
     <section id="projects">
       <h2>Projects</h2>
+
+      <div class="card">
+        <h3>Research Assistant Agent — LangGraph Agentic Research Tool</h3>
+        <p class="meta">Softpro AI Internship · Major/Capstone Project · Jul 2026 – Present</p>
+        <p>
+          Building a LangGraph agent that takes a research topic and autonomously searches, reads, and
+          synthesizes sources into a cited mini-report, with a Think → Act → Observe loop visible live
+          in a Streamlit UI. In active development.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Pydantic</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>AI Content Summarizer</h3>
+        <p class="meta">Softpro AI Internship · Mini-Project 1 · Jun 2026 · <a href="https://github.com/shxvansh07/ai-content-summarizer">GitHub ↗</a></p>
+        <p>
+          A Streamlit app that turns a PDF, article URL, or transcript into a structured summary
+          (TL;DR, key points, action items, tags) validated through Pydantic. Diagnosed and fixed a
+          real prompt-engineering bug along the way — a small model mistook a raw JSON Schema prompt
+          for an instruction to describe a schema instead of filling one in.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">Pydantic</span>
+          <span class="tag">pdfplumber</span>
+          <span class="tag">BeautifulSoup</span>
+          <span class="tag">Streamlit</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Chat With Your Documents — RAG Assistant</h3>
+        <p class="meta">Softpro AI Internship · Mini-Project 2 · Jun 2026 – Jul 2026 · <a href="https://github.com/shxvansh07/chat-with-your-documents-rag-assistant">GitHub ↗</a></p>
+        <p>
+          A Streamlit app that lets users upload PDFs/text documents and get answers grounded strictly
+          in the uploaded content, chunked and embedded with sentence-transformers into a local
+          ChromaDB store, with a "Sources used" citation panel on every answer.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">Sentence-Transformers</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">Streamlit</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>IEMPCOS MART — Automated Customer Feedback System</h3>
+        <p class="meta">Freelance / Community Project · Solo · Jul 2026 · <a href="https://github.com/shxvansh07/iempcos-mart-feedback-system">GitHub ↗</a></p>
+        <p>
+          Built a fully automated customer feedback system for a local grocery mart in Google Apps
+          Script bound to a Google Sheet, with instant email alerts on every submission, a weekly
+          digest with an Excel export, and QR-code posters driving customers to the form in-store.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Google Apps Script</span>
+          <span class="tag">Google Sheets/Forms API</span>
+          <span class="tag">clasp</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
 
       <div class="card">
         <h3>Intrusion Detection System — ML on NSL-KDD</h3>
@@ -94,32 +169,41 @@
 
       <div class="card">
         <h3>MedPredict — ML Symptom Checker &amp; Hospital Locator</h3>
-        <p class="meta">Dec 2025 – Apr 2026</p>
+        <p class="meta">Personal Project · Solo · Dec 2025 · <a href="https://github.com/shxvansh07/medpredict">GitHub ↗</a></p>
         <p>
-          Built a Random-Forest engine that predicts likely conditions from reported symptoms, served
-          through an interactive JavaFX desktop app. Integrated GPS geolocation to rank the nearest
-          hospitals for the predicted condition — owned the full pipeline, model, and GUI end to end.
+          Rebuilt as a Random-Forest symptom-to-condition engine behind a FastAPI ML microservice, with
+          a JavaFX client. Added an NLP intake path (free-text symptoms matched via sentence embeddings),
+          per-prediction SHAP explainability, and a specialty-aware hospital locator. ~97.6% held-out
+          test accuracy across 41 conditions and 132 symptoms.
         </p>
         <div class="tag-row">
           <span class="tag">Java</span>
           <span class="tag">JavaFX</span>
-          <span class="tag">Random Forest</span>
-          <span class="tag">Geolocation</span>
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">SHAP</span>
+          <span class="tag">Sentence-Transformers</span>
         </div>
       </div>
 
       <div class="card">
         <h3>Concurrency-Safe Ticket Booking System</h3>
-        <p class="meta">DBMS Lab Project · Team of 6 · Dec 2025 – Apr 2026</p>
+        <p class="meta">Rebuilt Solo · Originally DBMS Lab Project (Team of 6) · Dec 2025 · <a href="https://github.com/shxvansh07/ticket-booking-system">GitHub ↗</a></p>
         <p>
-          Designed a normalized MySQL platform for high-demand event ticketing with a fully
-          transactional booking workflow. Built conflict-resolution with transaction isolation and
-          atomic seat reservation — preventing seat double-booking under concurrent load.
+          Rebuilt around two distinct problems: seat-level double-booking under concurrency, and
+          database overload from a thundering herd during high-demand ticket drops. Uses PostgreSQL
+          row-level locking (<code>SELECT ... FOR UPDATE SKIP LOCKED</code>) plus a Redis-backed virtual
+          waiting room. A concurrency stress test with 200 simulated concurrent users on one seat
+          confirmed exactly one booking succeeds, verified at the database level.
         </p>
         <div class="tag-row">
-          <span class="tag">MySQL</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Transactions &amp; Concurrency Control</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">asyncpg</span>
+          <span class="tag">Redis</span>
+          <span class="tag">WebSockets</span>
         </div>
       </div>
     </section>
@@ -133,7 +217,7 @@
         </div>
         <div class="skill-card">
           <h3>Gen AI &amp; LLM Engineering</h3>
-          <p>Prompt engineering, RAG, embeddings, Groq/Gemini/Ollama APIs, ChromaDB, Streamlit, Pydantic</p>
+          <p>Prompt engineering, RAG, embeddings, LangChain (LCEL, memory, tools), LangGraph (state machines, agentic workflows), Groq/Gemini/Ollama APIs, ChromaDB, Streamlit, Pydantic</p>
         </div>
         <div class="skill-card">
           <h3>Databases</h3>
@@ -186,6 +270,11 @@
         <h3>Member — Codex, Coding Club</h3>
         <p class="meta">MIT Bengaluru</p>
         <p>Sharpen data structures &amp; algorithms with regular LeetCode problem-solving; compete in hackathons and competitive-programming contests.</p>
+      </div>
+      <div class="leadership-item">
+        <h3>School Captain</h3>
+        <p class="meta">Kendriya Vidyalaya, IFFCO — Aonla, Bareilly</p>
+        <p>Represented the student body as the elected head and primary liaison between students and faculty/administration — led discipline during assemblies and school-wide events, and coordinated inter-house competitions and annual day/cultural functions.</p>
       </div>
     </section>
 
